@@ -102,10 +102,6 @@ class AudioService: NSObject {
     func changeSpeed(_ speed: AudioSpeed) {
         player?.rate = speed.rawValue
     }
-    
-    func next() {
-        
-    }
 }
 
 extension AudioService: AVAudioPlayerDelegate {
