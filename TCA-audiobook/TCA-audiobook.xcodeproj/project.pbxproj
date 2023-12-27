@@ -93,7 +93,6 @@
 				BD3666512B3B282700A5CC12 /* Views */,
 				BD36666E2B3B282C00A5CC12 /* Modules */,
 				BD3666422B3B282600A5CC12 /* Resources */,
-				BD3666722B3B28E200A5CC12 /* Preview Content */,
 			);
 			path = "TCA-audiobook";
 			sourceTree = "<group>";
@@ -172,13 +171,6 @@
 				BD3666552B3B282700A5CC12 /* Player */,
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		BD3666722B3B28E200A5CC12 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		BD3666732B3B290900A5CC12 /* App */ = {
@@ -415,7 +407,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"TCA-audiobook/Preview Content\"";
 				DEVELOPMENT_TEAM = YNH5T7N464;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -444,7 +435,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"TCA-audiobook/Preview Content\"";
 				DEVELOPMENT_TEAM = YNH5T7N464;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
