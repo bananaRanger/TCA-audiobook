@@ -27,6 +27,7 @@
 		BD36666C2B3B282700A5CC12 /* AudioBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3666592B3B282700A5CC12 /* AudioBook.swift */; };
 		BD36666D2B3B282700A5CC12 /* CaseIterable+Nearest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD36665B2B3B282700A5CC12 /* CaseIterable+Nearest.swift */; };
 		BD3666712B3B287600A5CC12 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = BD3666702B3B287600A5CC12 /* ComposableArchitecture */; };
+		BD3666772B3C012E00A5CC12 /* ImageSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3666762B3C012E00A5CC12 /* ImageSegmentedControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		BD3666582B3B282700A5CC12 /* AudioSpeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioSpeed.swift; sourceTree = "<group>"; };
 		BD3666592B3B282700A5CC12 /* AudioBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioBook.swift; sourceTree = "<group>"; };
 		BD36665B2B3B282700A5CC12 /* CaseIterable+Nearest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CaseIterable+Nearest.swift"; sourceTree = "<group>"; };
+		BD3666762B3C012E00A5CC12 /* ImageSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSegmentedControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 			children = (
 				BD3666522B3B282700A5CC12 /* ActionButton.swift */,
 				BD3666532B3B282700A5CC12 /* SwiftUISlider.swift */,
+				BD3666762B3C012E00A5CC12 /* ImageSegmentedControl.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				BD36666B2B3B282700A5CC12 /* AudioSpeed.swift in Sources */,
 				BD36666C2B3B282700A5CC12 /* AudioBook.swift in Sources */,
 				BD3666352B3B27E700A5CC12 /* TCA_audiobookApp.swift in Sources */,
+				BD3666772B3C012E00A5CC12 /* ImageSegmentedControl.swift in Sources */,
 				BD3666622B3B282700A5CC12 /* AudioService.swift in Sources */,
 				BD3666632B3B282700A5CC12 /* AudioBookService.swift in Sources */,
 				BD3666682B3B282700A5CC12 /* SwiftUISlider.swift in Sources */,

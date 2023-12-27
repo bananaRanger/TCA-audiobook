@@ -17,6 +17,7 @@ struct Player: Reducer {
         var isPlaying: Bool = false
 
         var progress: Double = .zero
+        var selectedSegment: Int = .zero
         
         var currentTime: TimeComponents = .init(seconds: .zero)
         var duration: TimeComponents = .init(seconds: .zero)
@@ -37,6 +38,7 @@ struct Player: Reducer {
         case changeSpeed
         
         case onSliderValueChange(Double)
+        case onSegmentValueChange(Int)
     }
     
     @Dependency(\.continuousClock) var clock
@@ -107,6 +109,9 @@ struct Player: Reducer {
         case .onSliderValueChange(let value):
             state.progress = value
             audioBookService.seek(to: value)
+            return .none
+        case .onSegmentValueChange(let value):
+            state.selectedSegment = value
             return .none
         }
     }
