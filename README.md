@@ -1,4 +1,3 @@
 # TCA-audiobook
 
-
-<img src="https://github.com/bananaRanger/TCA-audiobook/assets/19995053/5dec017e-687a-4b0b-b8f7-10f91e28c9e0" width="500">
+<img src="https://github.com/bananaRanger/TCA-audiobook/assets/19995053/4918078b-a638-4629-991e-2ae51a0e42a0" width="640">
