@@ -38,6 +38,7 @@ struct PlayerView: View {
                     viewStore.send(.onAppear)
                 }
         }
+        .alert(store: store.scope(state: \.$errorAlert, action: \.errorAlert))
     }
 }
 
