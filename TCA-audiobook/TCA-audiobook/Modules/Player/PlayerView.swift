@@ -43,6 +43,13 @@ struct PlayerView: View {
 
 private extension PlayerView {
     var contentView: some View {
+        ZStack {
+            mainView
+            segmentControllerView
+        }
+    }
+    
+    var mainView: some View {
         VStack(spacing: 36) {
             
             coverImageView
@@ -59,6 +66,24 @@ private extension PlayerView {
             actionsBarView
             
             Spacer()
+        }
+    }
+    
+    var segmentControllerView: some View {
+        WithViewStore(store, observe: { $0 }) { viewStore in
+            VStack {
+                Spacer()
+                
+                ImageSegmentedControl(
+                    preselectedIndex: Binding(
+                        get: { viewStore.selectedSegment },
+                        set: { store.send(.onSegmentValueChange($0)) }
+                    ),
+                    images: [
+                        Image(systemName: "headphones"),
+                        Image(systemName: "list.bullet.indent")]
+                )
+            }
         }
     }
     
