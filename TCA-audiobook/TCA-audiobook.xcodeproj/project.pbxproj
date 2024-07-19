@@ -31,6 +31,7 @@
 		BDD1204A2C4A43A800D46AAB /* CaseIterableNearestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD120492C4A43A800D46AAB /* CaseIterableNearestTest.swift */; };
 		BDD1204C2C4A4BFF00D46AAB /* ScreenTapHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1204B2C4A4BFF00D46AAB /* ScreenTapHandlerTests.swift */; };
 		BDD1204E2C4A4CCF00D46AAB /* TimeComponentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1204D2C4A4CCF00D46AAB /* TimeComponentsTests.swift */; };
+		BDD120502C4A4F5400D46AAB /* EnglishFairyTalesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1204F2C4A4F5400D46AAB /* EnglishFairyTalesTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		BDD120492C4A43A800D46AAB /* CaseIterableNearestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseIterableNearestTest.swift; sourceTree = "<group>"; };
 		BDD1204B2C4A4BFF00D46AAB /* ScreenTapHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTapHandlerTests.swift; sourceTree = "<group>"; };
 		BDD1204D2C4A4CCF00D46AAB /* TimeComponentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeComponentsTests.swift; sourceTree = "<group>"; };
+		BDD1204F2C4A4F5400D46AAB /* EnglishFairyTalesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishFairyTalesTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 				BDD120492C4A43A800D46AAB /* CaseIterableNearestTest.swift */,
 				BDD1204B2C4A4BFF00D46AAB /* ScreenTapHandlerTests.swift */,
 				BDD1204D2C4A4CCF00D46AAB /* TimeComponentsTests.swift */,
+				BDD1204F2C4A4F5400D46AAB /* EnglishFairyTalesTests.swift */,
 			);
 			path = "TCA-audiobookTests";
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDD120502C4A4F5400D46AAB /* EnglishFairyTalesTests.swift in Sources */,
 				BDD1204C2C4A4BFF00D46AAB /* ScreenTapHandlerTests.swift in Sources */,
 				BDD1204E2C4A4CCF00D46AAB /* TimeComponentsTests.swift in Sources */,
 				BDD1204A2C4A43A800D46AAB /* CaseIterableNearestTest.swift in Sources */,
