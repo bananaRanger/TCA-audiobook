@@ -28,7 +28,18 @@
 		BD36666D2B3B282700A5CC12 /* CaseIterable+Nearest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD36665B2B3B282700A5CC12 /* CaseIterable+Nearest.swift */; };
 		BD3666712B3B287600A5CC12 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = BD3666702B3B287600A5CC12 /* ComposableArchitecture */; };
 		BD3666772B3C012E00A5CC12 /* ImageSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3666762B3C012E00A5CC12 /* ImageSegmentedControl.swift */; };
+		BDD1204A2C4A43A800D46AAB /* CaseIterableNearestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD120492C4A43A800D46AAB /* CaseIterableNearestTest.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BDD120442C4A42DB00D46AAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD3666292B3B27E700A5CC12 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD3666302B3B27E700A5CC12;
+			remoteInfo = "TCA-audiobook";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		BD3666312B3B27E700A5CC12 /* TCA-audiobook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TCA-audiobook.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +63,8 @@
 		BD3666592B3B282700A5CC12 /* AudioBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioBook.swift; sourceTree = "<group>"; };
 		BD36665B2B3B282700A5CC12 /* CaseIterable+Nearest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CaseIterable+Nearest.swift"; sourceTree = "<group>"; };
 		BD3666762B3C012E00A5CC12 /* ImageSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSegmentedControl.swift; sourceTree = "<group>"; };
+		BDD120402C4A42DB00D46AAB /* TCA-audiobookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TCA-audiobookTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDD120492C4A43A800D46AAB /* CaseIterableNearestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseIterableNearestTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +76,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BDD1203D2C4A42DB00D46AAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -70,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				BD3666332B3B27E700A5CC12 /* TCA-audiobook */,
+				BDD120412C4A42DB00D46AAB /* TCA-audiobookTests */,
 				BD3666322B3B27E700A5CC12 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				BD3666312B3B27E700A5CC12 /* TCA-audiobook.app */,
+				BDD120402C4A42DB00D46AAB /* TCA-audiobookTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -181,6 +203,14 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		BDD120412C4A42DB00D46AAB /* TCA-audiobookTests */ = {
+			isa = PBXGroup;
+			children = (
+				BDD120492C4A43A800D46AAB /* CaseIterableNearestTest.swift */,
+			);
+			path = "TCA-audiobookTests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -204,6 +234,24 @@
 			productReference = BD3666312B3B27E700A5CC12 /* TCA-audiobook.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BDD1203F2C4A42DB00D46AAB /* TCA-audiobookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDD120482C4A42DB00D46AAB /* Build configuration list for PBXNativeTarget "TCA-audiobookTests" */;
+			buildPhases = (
+				BDD1203C2C4A42DB00D46AAB /* Sources */,
+				BDD1203D2C4A42DB00D46AAB /* Frameworks */,
+				BDD1203E2C4A42DB00D46AAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BDD120452C4A42DB00D46AAB /* PBXTargetDependency */,
+			);
+			name = "TCA-audiobookTests";
+			productName = "TCA-audiobookTests";
+			productReference = BDD120402C4A42DB00D46AAB /* TCA-audiobookTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -211,11 +259,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					BD3666302B3B27E700A5CC12 = {
 						CreatedOnToolsVersion = 15.0;
+					};
+					BDD1203F2C4A42DB00D46AAB = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = BD3666302B3B27E700A5CC12;
 					};
 				};
 			};
@@ -236,6 +288,7 @@
 			projectRoot = "";
 			targets = (
 				BD3666302B3B27E700A5CC12 /* TCA-audiobook */,
+				BDD1203F2C4A42DB00D46AAB /* TCA-audiobookTests */,
 			);
 		};
 /* End PBXProject section */
@@ -252,6 +305,13 @@
 				BD3666602B3B282700A5CC12 /* english_fairy_tales_05_64kb.mp3 in Resources */,
 				BD36665E2B3B282700A5CC12 /* english_fairy_tales_02_64kb.mp3 in Resources */,
 				BD36665F2B3B282700A5CC12 /* english_fairy_tales_03_64kb.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDD1203E2C4A42DB00D46AAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +338,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BDD1203C2C4A42DB00D46AAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDD1204A2C4A43A800D46AAB /* CaseIterableNearestTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BDD120452C4A42DB00D46AAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD3666302B3B27E700A5CC12 /* TCA-audiobook */;
+			targetProxy = BDD120442C4A42DB00D46AAB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		BD36663D2B3B27E800A5CC12 /* Debug */ = {
@@ -458,6 +534,44 @@
 			};
 			name = Release;
 		};
+		BDD120462C4A42DB00D46AAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YNH5T7N464;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anton.yereshchenko.TCA-audiobook.TCA-audiobookTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TCA-audiobook.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TCA-audiobook";
+			};
+			name = Debug;
+		};
+		BDD120472C4A42DB00D46AAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YNH5T7N464;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anton.yereshchenko.TCA-audiobook.TCA-audiobookTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TCA-audiobook.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TCA-audiobook";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -475,6 +589,15 @@
 			buildConfigurations = (
 				BD3666402B3B27E800A5CC12 /* Debug */,
 				BD3666412B3B27E800A5CC12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDD120482C4A42DB00D46AAB /* Build configuration list for PBXNativeTarget "TCA-audiobookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDD120462C4A42DB00D46AAB /* Debug */,
+				BDD120472C4A42DB00D46AAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
