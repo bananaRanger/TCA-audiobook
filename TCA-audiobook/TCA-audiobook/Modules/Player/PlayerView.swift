@@ -157,7 +157,7 @@ private extension PlayerView {
         WithViewStore(store, observe: { $0 }) { viewStore in
             HStack(spacing: 28) {
                 ActionButton(systemName: "backward.end.fill") {
-                    viewStore.send(.perevious)
+                    viewStore.send(.previous)
                 }
                 ActionButton(systemName: "gobackward.5") {
                     viewStore.send(.moveBackword)

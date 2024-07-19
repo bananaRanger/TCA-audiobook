@@ -32,7 +32,7 @@ struct Player: Reducer {
         case play
         case pause
         
-        case perevious
+        case previous
         case next
         
         case moveBackword
@@ -86,7 +86,7 @@ struct Player: Reducer {
                 state.isPlaying = false
                 audioBookService.pause()
                 return .none
-            case .perevious:
+            case .previous:
                 do {
                     state.currentBookItem = try audioBookService.previousItem()
                     if !state.isPlaying { audioBookService.pause() }
