@@ -33,6 +33,10 @@
 		BDD1204E2C4A4CCF00D46AAB /* TimeComponentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1204D2C4A4CCF00D46AAB /* TimeComponentsTests.swift */; };
 		BDD120502C4A4F5400D46AAB /* EnglishFairyTalesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1204F2C4A4F5400D46AAB /* EnglishFairyTalesTests.swift */; };
 		BDD120522C4AA39B00D46AAB /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD120512C4AA39B00D46AAB /* AudioPlayer.swift */; };
+		BDD120542C4AA59300D46AAB /* AudioServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD120532C4AA59300D46AAB /* AudioServiceTests.swift */; };
+		BDD120572C4AAF3500D46AAB /* MockAudioBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD120562C4AAF3500D46AAB /* MockAudioBook.swift */; };
+		BDD120592C4AAF5700D46AAB /* MockAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD120582C4AAF5700D46AAB /* MockAudioPlayer.swift */; };
+		BDD1205B2C4AAF7900D46AAB /* MockAudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1205A2C4AAF7900D46AAB /* MockAudioService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +77,10 @@
 		BDD1204D2C4A4CCF00D46AAB /* TimeComponentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeComponentsTests.swift; sourceTree = "<group>"; };
 		BDD1204F2C4A4F5400D46AAB /* EnglishFairyTalesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishFairyTalesTests.swift; sourceTree = "<group>"; };
 		BDD120512C4AA39B00D46AAB /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		BDD120532C4AA59300D46AAB /* AudioServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioServiceTests.swift; sourceTree = "<group>"; };
+		BDD120562C4AAF3500D46AAB /* MockAudioBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAudioBook.swift; sourceTree = "<group>"; };
+		BDD120582C4AAF5700D46AAB /* MockAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAudioPlayer.swift; sourceTree = "<group>"; };
+		BDD1205A2C4AAF7900D46AAB /* MockAudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAudioService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,12 +223,24 @@
 		BDD120412C4A42DB00D46AAB /* TCA-audiobookTests */ = {
 			isa = PBXGroup;
 			children = (
+				BDD120552C4AAF2300D46AAB /* Mocks */,
 				BDD120492C4A43A800D46AAB /* CaseIterableNearestTest.swift */,
 				BDD1204B2C4A4BFF00D46AAB /* ScreenTapHandlerTests.swift */,
 				BDD1204D2C4A4CCF00D46AAB /* TimeComponentsTests.swift */,
 				BDD1204F2C4A4F5400D46AAB /* EnglishFairyTalesTests.swift */,
+				BDD120532C4AA59300D46AAB /* AudioServiceTests.swift */,
 			);
 			path = "TCA-audiobookTests";
+			sourceTree = "<group>";
+		};
+		BDD120552C4AAF2300D46AAB /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				BDD120562C4AAF3500D46AAB /* MockAudioBook.swift */,
+				BDD120582C4AAF5700D46AAB /* MockAudioPlayer.swift */,
+				BDD1205A2C4AAF7900D46AAB /* MockAudioService.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,10 +375,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDD120542C4AA59300D46AAB /* AudioServiceTests.swift in Sources */,
 				BDD120502C4A4F5400D46AAB /* EnglishFairyTalesTests.swift in Sources */,
 				BDD1204C2C4A4BFF00D46AAB /* ScreenTapHandlerTests.swift in Sources */,
 				BDD1204E2C4A4CCF00D46AAB /* TimeComponentsTests.swift in Sources */,
 				BDD1204A2C4A43A800D46AAB /* CaseIterableNearestTest.swift in Sources */,
+				BDD120572C4AAF3500D46AAB /* MockAudioBook.swift in Sources */,
+				BDD1205B2C4AAF7900D46AAB /* MockAudioService.swift in Sources */,
+				BDD120592C4AAF5700D46AAB /* MockAudioPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
