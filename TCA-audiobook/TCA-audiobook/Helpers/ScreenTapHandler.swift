@@ -10,25 +10,26 @@ import UIKit.UIScreen
 struct ScreenTapHandler {
     static func handleTap(
         in point: CGPoint,
+        with screenBounds: CGRect = UIScreen.main.bounds,
         onTap: ((Location) -> Void)? = nil
     ) {
-        if point.x < UIScreen.main.bounds.width / 2 &&
-            point.y < UIScreen.main.bounds.height / 2 {
+        if point.x <= screenBounds.width / 2 &&
+            point.y <= screenBounds.height / 2 {
             onTap?(.topLeft)
         }
         else
-        if point.x > UIScreen.main.bounds.width / 2 &&
-            point.y < UIScreen.main.bounds.height / 2 {
+        if point.x >= screenBounds.width / 2 &&
+            point.y <= screenBounds.height / 2 {
             onTap?(.topRight)
         }
         else
-        if point.x > UIScreen.main.bounds.width / 2 &&
-            point.y > UIScreen.main.bounds.height / 2 {
+        if point.x >= screenBounds.width / 2 &&
+            point.y >= screenBounds.height / 2 {
             onTap?(.bottomRight)
         }
         else
-        if point.x < UIScreen.main.bounds.width / 2 &&
-            point.y > UIScreen.main.bounds.height / 2 {
+        if point.x <= screenBounds.width / 2 &&
+            point.y >= screenBounds.height / 2 {
             onTap?(.bottomLeft)
         }
     }
