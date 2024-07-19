@@ -32,6 +32,7 @@
 		BDD1204C2C4A4BFF00D46AAB /* ScreenTapHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1204B2C4A4BFF00D46AAB /* ScreenTapHandlerTests.swift */; };
 		BDD1204E2C4A4CCF00D46AAB /* TimeComponentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1204D2C4A4CCF00D46AAB /* TimeComponentsTests.swift */; };
 		BDD120502C4A4F5400D46AAB /* EnglishFairyTalesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1204F2C4A4F5400D46AAB /* EnglishFairyTalesTests.swift */; };
+		BDD120522C4AA39B00D46AAB /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD120512C4AA39B00D46AAB /* AudioPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		BDD1204B2C4A4BFF00D46AAB /* ScreenTapHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTapHandlerTests.swift; sourceTree = "<group>"; };
 		BDD1204D2C4A4CCF00D46AAB /* TimeComponentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeComponentsTests.swift; sourceTree = "<group>"; };
 		BDD1204F2C4A4F5400D46AAB /* EnglishFairyTalesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishFairyTalesTests.swift; sourceTree = "<group>"; };
+		BDD120512C4AA39B00D46AAB /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 		BD3666492B3B282600A5CC12 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				BDD120512C4AA39B00D46AAB /* AudioPlayer.swift */,
 				BD36664A2B3B282600A5CC12 /* AudioService.swift */,
 				BD36664B2B3B282600A5CC12 /* AudioBookService.swift */,
 			);
@@ -344,6 +347,7 @@
 				BD36666A2B3B282700A5CC12 /* PlayerFeature.swift in Sources */,
 				BD3666652B3B282700A5CC12 /* ScreenTapHandler.swift in Sources */,
 				BD3666672B3B282700A5CC12 /* ActionButton.swift in Sources */,
+				BDD120522C4AA39B00D46AAB /* AudioPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
