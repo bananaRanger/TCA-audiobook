@@ -32,7 +32,7 @@ class AudioBookService {
         self.audioService = AudioService()
     }
     
-    func configurate(with audioBooks: [BookItem]) throws {
+    func configure(with audioBooks: [BookItem]) throws {
         if self.audioBooks.isEmpty {
             self.audioBooks = audioBooks
             currentAudioBook = audioBooks.first

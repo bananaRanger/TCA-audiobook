@@ -56,7 +56,7 @@ struct Player: Reducer {
             switch action {
             case .onAppear:
                 do {
-                    try audioBookService.configurate(
+                    try audioBookService.configure(
                         with: state.audioBookItems
                     )
                 } catch {
