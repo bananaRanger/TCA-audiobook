@@ -7,29 +7,56 @@
 
 import AVFoundation
 
-class AudioService: NSObject {
-    private var player: AVAudioPlayer?
+//MARK: Abstraction
+
+protocol AudioServiceProtocol {
+    var duration: TimeInterval { get }
+    var currentTime: TimeInterval { get set }
+    var speed: AudioSpeed { get set }
+    
+    var onDidFinishPlaying: ((Bool) -> Void)? { get set }
+    var onDecodeErrorDidOccur: ((Error?) -> Void)? { get set }
+    
+    func configure() throws
+    
+    func play(audiobook: (any AudioBook)?) throws -> Bool
+    
+    func pause()
+    func stop()
+    
+    func moveBackword(for seconds: Double)
+    func moveForward(for seconds: Double)
+    
+    func seek(to value: Double)
+}
+
+//MARK: Implementation
+
+class AudioService: NSObject, AudioServiceProtocol {
+    private var player: AudioPlayerProtocol?
+    
+    var duration: TimeInterval {
+        return player?.duration ?? .zero
+    }
     
     var currentTime: TimeInterval {
         get { player?.currentTime ?? .zero }
         set { player?.currentTime = newValue}
     }
     
-    var duration: TimeInterval {
-        return player?.duration ?? .zero
-    }
-    
     var speed: AudioSpeed {
-        let rate = player?.rate ?? .zero
-        return .init(rawValue: rate) ?? ._1_0
+        get {
+            let rate = player?.rate ?? .zero
+            return .init(rawValue: rate) ?? ._1_0
+        }
+        set { player?.rate = newValue.rawValue }
     }
         
     var onDidFinishPlaying: ((Bool) -> Void)?
     var onDecodeErrorDidOccur: ((Error?) -> Void)?
 
-    func configurate() throws {
-        try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
-        try AVAudioSession.sharedInstance().setActive(true)
+    func configure() throws {
+        try AudioPlayer.configure()
     }
     
     func play(audiobook: (any AudioBook)? = nil) throws -> Bool {
@@ -50,7 +77,7 @@ class AudioService: NSObject {
             throw URLError(.badURL)
         }
         
-        let player = try AVAudioPlayer(
+        let player = try AudioPlayer(
             contentsOf: url
         )
         
@@ -74,33 +101,25 @@ class AudioService: NSObject {
     }
     
     func moveBackword(for seconds: Double) {
-        guard let player = player else { return }
-        var time = player.currentTime - seconds
+        var time = currentTime - seconds
         
         if time < .zero {
             time = .zero
         }
         
-        player.currentTime = time
+        currentTime = time
     }
     
     func moveForward(for seconds: Double) {
-        guard let player = player else { return }
-        let time = player.currentTime + seconds
+        let time = currentTime + seconds
         
-        if time < player.duration {
-            player.currentTime = time
+        if time < duration {
+            currentTime = time
         }
     }
     
     func seek(to value: Double) {
-        guard let player = player else { return }
-
-        player.currentTime = player.duration * value
-    }
-    
-    func changeSpeed(_ speed: AudioSpeed) {
-        player?.rate = speed.rawValue
+        currentTime = duration * value
     }
 }
 

@@ -10,7 +10,7 @@ import Foundation
 class AudioBookService {
     typealias BookItem = EnglishFairyTales
     
-    private let audioService: AudioService
+    private var audioService: AudioServiceProtocol
     
     private var audioBooks: [BookItem] = []
     private(set) var currentAudioBook: (BookItem)?
@@ -37,7 +37,7 @@ class AudioBookService {
             self.audioBooks = audioBooks
             currentAudioBook = audioBooks.first
             
-            try audioService.configurate()
+            try audioService.configure()
         }
         
         audioService.onDidFinishPlaying = { [weak self] state in
@@ -92,7 +92,7 @@ class AudioBookService {
     }
     
     func changeSpeed(_ speed: AudioSpeed) {
-        audioService.changeSpeed(speed)
+        audioService.speed = speed
     }
     
     func seek(to value: Double) {
