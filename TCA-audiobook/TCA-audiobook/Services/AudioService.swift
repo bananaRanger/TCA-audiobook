@@ -10,6 +10,8 @@ import AVFoundation
 //MARK: Abstraction
 
 protocol AudioServiceProtocol {
+    var player: AudioPlayerProtocol? { get set }
+
     var duration: TimeInterval { get }
     var currentTime: TimeInterval { get set }
     var speed: AudioSpeed { get set }
@@ -22,19 +24,15 @@ protocol AudioServiceProtocol {
     func play(audiobook: (any AudioBook)?) throws -> Bool
     
     func pause()
-    func stop()
+    mutating func stop()
     
-    func moveBackword(for seconds: Double)
-    func moveForward(for seconds: Double)
+    mutating func moveBackword(for seconds: Double)
+    mutating func moveForward(for seconds: Double)
     
-    func seek(to value: Double)
+    mutating func seek(to value: Double)
 }
 
-//MARK: Implementation
-
-class AudioService: NSObject, AudioServiceProtocol {
-    private var player: AudioPlayerProtocol?
-    
+extension AudioServiceProtocol {
     var duration: TimeInterval {
         return player?.duration ?? .zero
     }
@@ -51,7 +49,44 @@ class AudioService: NSObject, AudioServiceProtocol {
         }
         set { player?.rate = newValue.rawValue }
     }
+    
+    func pause() {
+        player?.pause()
+    }
+    
+    mutating func stop() {
+        player?.stop()
+        player = nil
+    }
+    
+    mutating func moveBackword(for seconds: Double) {
+        var time = currentTime - seconds
         
+        if time < .zero {
+            time = .zero
+        }
+        
+        currentTime = time
+    }
+    
+    mutating func moveForward(for seconds: Double) {
+        let time = currentTime + seconds
+        
+        if time < duration {
+            currentTime = time
+        }
+    }
+    
+    mutating func seek(to value: Double) {
+        currentTime = duration * value
+    }
+}
+
+//MARK: Implementation
+
+class AudioService: NSObject, AudioServiceProtocol {
+    var player: AudioPlayerProtocol?
+    
     var onDidFinishPlaying: ((Bool) -> Void)?
     var onDecodeErrorDidOccur: ((Error?) -> Void)?
 
@@ -89,37 +124,6 @@ class AudioService: NSObject, AudioServiceProtocol {
         player.enableRate = true
         
         return player.play()
-    }
-    
-    func pause() {
-        player?.pause()
-    }
-    
-    func stop() {
-        player?.stop()
-        player = nil
-    }
-    
-    func moveBackword(for seconds: Double) {
-        var time = currentTime - seconds
-        
-        if time < .zero {
-            time = .zero
-        }
-        
-        currentTime = time
-    }
-    
-    func moveForward(for seconds: Double) {
-        let time = currentTime + seconds
-        
-        if time < duration {
-            currentTime = time
-        }
-    }
-    
-    func seek(to value: Double) {
-        currentTime = duration * value
     }
 }
 
