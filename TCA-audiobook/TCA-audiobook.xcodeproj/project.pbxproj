@@ -30,6 +30,7 @@
 		BD3666772B3C012E00A5CC12 /* ImageSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3666762B3C012E00A5CC12 /* ImageSegmentedControl.swift */; };
 		BDD1204A2C4A43A800D46AAB /* CaseIterableNearestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD120492C4A43A800D46AAB /* CaseIterableNearestTest.swift */; };
 		BDD1204C2C4A4BFF00D46AAB /* ScreenTapHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1204B2C4A4BFF00D46AAB /* ScreenTapHandlerTests.swift */; };
+		BDD1204E2C4A4CCF00D46AAB /* TimeComponentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1204D2C4A4CCF00D46AAB /* TimeComponentsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		BDD120402C4A42DB00D46AAB /* TCA-audiobookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TCA-audiobookTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD120492C4A43A800D46AAB /* CaseIterableNearestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseIterableNearestTest.swift; sourceTree = "<group>"; };
 		BDD1204B2C4A4BFF00D46AAB /* ScreenTapHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTapHandlerTests.swift; sourceTree = "<group>"; };
+		BDD1204D2C4A4CCF00D46AAB /* TimeComponentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeComponentsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 			children = (
 				BDD120492C4A43A800D46AAB /* CaseIterableNearestTest.swift */,
 				BDD1204B2C4A4BFF00D46AAB /* ScreenTapHandlerTests.swift */,
+				BDD1204D2C4A4CCF00D46AAB /* TimeComponentsTests.swift */,
 			);
 			path = "TCA-audiobookTests";
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDD1204C2C4A4BFF00D46AAB /* ScreenTapHandlerTests.swift in Sources */,
+				BDD1204E2C4A4CCF00D46AAB /* TimeComponentsTests.swift in Sources */,
 				BDD1204A2C4A43A800D46AAB /* CaseIterableNearestTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
